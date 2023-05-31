@@ -1,0 +1,364 @@
+
+<!doctype html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>cyan_ran NOS-TALGI-A</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+
+    
+
+    
+
+<link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+<meta name="theme-color" content="#712cf9">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .EmbededViewerArea {
+        position: relative;
+        width: 100%;
+    }
+    .EmbededViewerArea__screen {
+        padding: 8px;
+        width: 100%;
+    }
+    .EmbededViewerArea__iframeContainer {
+        height: 400px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+    .EmbededViewerArea__bottomMenu {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fafafa;
+        height: 50px;
+        width: 100%;
+    }
+    @media  only screen and (max-width: 959px) {
+        .EmbededViewerArea {
+            margin-top: -8px;
+        }
+    }
+    @media  only screen and (min-width: 960px) {
+        .EmbededViewerArea {
+            margin-top: -16px;
+        }
+    }
+    @media (min-width:375px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 400px;
+        }
+    }
+    @media (min-width:375px) and (min-height: 620px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 420px;
+        }
+    }
+    @media (min-width:375px) and (min-height: 750px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 550px;
+        }
+    }
+    @media (min-width:480px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 400px;
+        }
+    }
+    @media (min-width:480px) and (min-height: 720px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 520px;
+        }
+    }
+    @media (min-width:600px) and (min-height: 720px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 520px;
+        }
+    }
+    @media (min-width:600px) and (min-height: 820px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 620px;
+        }
+    }
+    @media (min-width:600px) and (min-height: 1020px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 820px;
+        }
+    }
+    @media (min-width:600px) and (min-height: 1220px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 1020px;
+        }
+    }
+    @media (min-width:960px) and (min-height: 720px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 520px;
+        }
+    }
+    @media (min-width:960px) and (min-height: 820px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 620px;
+        }
+    }
+    @media (min-width:960px) and (min-height: 1020px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 820px;
+        }
+    }
+    @media (min-width:1264px) and (min-height: 720px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 520px;
+        }
+    }
+    @media (min-width:1264px) and (min-height: 820px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 620px;
+        }
+    }
+    @media (min-width:1264px) and (min-height: 1020px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 820px;
+        }
+    }
+    @media (min-width:1264px) and (min-height: 1220px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 1020px;
+        }
+    }
+    @media (max-height: 419px) {
+        .EmbededViewerArea__iframeContainer.hybrid {
+            height: 250px;
+        }
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 250px;
+        }
+    }
+    @media (min-height: 420px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 300px;
+        }
+    }
+    @media (min-height: 520px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 400px;
+        }
+    }
+    @media (min-height: 620px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 420px;
+        }
+    }
+    @media (min-height: 720px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 520px;
+        }
+    }
+    @media (min-height: 820px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 620px;
+        }
+    }
+    @media (min-height: 920px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 720px;
+        }
+    }
+    @media (min-height: 1020px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 820px;
+        }
+    }
+    @media (min-height: 1120px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 920px;
+        }
+    }
+    @media (min-height: 1220px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 1020px;
+        }
+    }
+    @media (min-height: 1320px) {
+        .EmbededViewerArea__iframeContainer.vertical {
+            height: 1120px;
+        }
+    }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+  </head>
+  <body class="d-flex h-100 text-center text-bg-dark flex-column  mb-4">
+    
+
+
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column mb-4">
+  <header class="mb-4 mt-4 mh-100">
+    <div>
+      <h3 class="float-md-start mb-0">NOS-TALGI-A</h3>
+      
+    </div>
+    <br>
+    <div>
+        <footer class="float-md-end mb-0 text-muted"><em>"Ten years in business, ten years of maintenance!"</em></footer>
+    </div>
+
+
+  </header>
+
+  <main class="px-0 align-middle">
+    <section class="EmbededViewerArea mt-auto mb-auto">
+      <div class="EmbededViewerArea__screen mx-auto">
+          <div class="EmbededViewerArea__iframeContainer hybrid" style="position: relative;">
+            <!-- <iframe width='100%' height='100%' src='https://share.clip-studio.com/en-us/contents/embed?code=ec1c73d6-9356-48eb-a9be-9ab38bc452ce' frameborder='0' allowfullscreen></iframe> -->
+                                          <iframe src="https://share.clip-studio.com/en-us/contents/view?code=ec1c73d6-9356-48eb-a9be-9ab38bc452ce&amp;isContentsPage=1&amp;isDoubleIframe=1&amp;pageName=contents&amp;reader=hybrid3d&amp;SameSite=Strict" frameborder="0" allowfullscreen="" style="width:100%;height:100%" data-embeded-viewer></iframe>
+                                  </div>
+      </div>
+      
+  </section>
+  </main>
+
+  <footer class="mt-auto text-white-50 col-xs-6 h-100 mb-4">
+    
+  </footer>
+  
+  
+</div>
+
+
+<section class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="margin-top: 12vh;">
+    
+    <form class="need-validation w-100 mb-4 mt-4" id='message-form'>
+        <label class="h6 mb-4">Leave Your Comment</label>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="mt-auto">
+                    
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">Your name</span>
+                        </div>
+                        <input type="text" class="form-control" id='message-name' aria-describedby="basic-addon3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  mb-3">
+                <div class="mt-auto">
+                    
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">Your email</span>
+                        </div>
+                        <input type="email" class="form-control" id='message-email' aria-describedby="basic-addon3" placeholder="(optional)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 mb-3">
+                <textarea class="form-control col-12" aria-label="With textarea" id='message'></textarea>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-secondary float-md-end" id="submit">Send</button>
+            </div>   
+        </div>
+        
+    </form>
+    
+    <div class="row mt-auto w-100 mb-4">
+        <hr style="width: 50%; margin: 0 auto;">
+        <div id='messages' class="ml-4 mr-4">
+            
+        </div>
+    </div>
+  </section>
+  <script src="scripts/main.js"></script>
+    
+  
+</body>
+</html>
