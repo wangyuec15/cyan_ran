@@ -30,20 +30,18 @@ function underwave() {
 
 function wave() {
   // Store current mouse position
-  const maxmove = 80;
-  if(abs(mouseX - positions[0]) > maxmove) {
-    if(mouseX > positions[0]) {
-      positions.push(positions[0] + maxmove);
-    } else {
-      positions.push(positions[0] - maxmove);
+  const maxmove = 1;
+  if(abs(mouseX - positions[positions.length - 1]) > maxmove) {
+    if(mouseX > positions[positions.length-1]) {
+      for(let i = 1; positions[positions.length-1] + maxmove * i < mouseX; i++) {
+        positions.push(positions[positions.length-1] + maxmove * i);
+      }
+    } else if (mouseX < positions[positions.length-1]){
+      for(let i = 1; positions[positions.length-1] - maxmove * i > mouseX; i++) {
+        positions.push(positions[positions.length-1] - maxmove * i);
+      }
     }
-    
   }
-  // else {
-  //   positions.push( mouseX );
-  // }
-  
-  
   // Remove oldest position if array length exceeds delay
   if (positions.length > delay) {
     positions.shift();
@@ -56,6 +54,7 @@ function wave() {
   //   fill(0, alpha);
   //   ellipse(pos, 100, 20, 20);
   // }
+  
   let pos = positions[0];
   // ellipse(pos, 200, 20, 20);
 
@@ -75,6 +74,9 @@ function wave() {
         ellipse(x, y, 4, 4);
       }
     }
+  }
+  if(positions.length > 1) {
+    positions.shift();
   }
 
 }
