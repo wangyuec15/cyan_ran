@@ -9,12 +9,36 @@
       margin: 0;
       overflow: hidden;
     }
+    #scroll-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
+    }
   </style>
 </head>
 
 <body>
+  <!-- <div id="scroll-container"> -->
+    <!-- Your content here -->
+  <!-- </div> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
   <script src="sketch.js"></script>
+  <!-- <script>
+    let isScrolling = false; // Variable to track if the user is attempting to scroll
+
+    function handleScroll() {
+      console.log("scrolling");
+    }
+
+    function mouseReleased() {
+      isScrolling = false;
+    }
+
+    // document.body.addEventListener('wheel', handleScroll); // Add event listener to the document body
+  </script> -->
 </body>
 
 </html>
