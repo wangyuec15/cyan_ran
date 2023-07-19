@@ -5,9 +5,18 @@ let previousScrollPosition = 0; // Variable to store the previous scroll positio
 let wavebaseline = 0;
 let undercolor = undefined;
 let abovecolor = undefined;
+let ellipses = [];
+let maxellipses = 5;
+
+
+let angle = 0; // Angle variable for noise generation
+let noiseScale = 0.02; // Control the scale of the noise
+let noiseStrength = 50; // Control the strength/amplitude of the noise
+
 
 let customCursor; // Variable to store custom cursor SVG
-
+let cursorcanvas;
+let sketchcanvas;
 function preload() {
   // Load the custom cursor SVG
   customCursor = loadImage('./static/mouse.svg');
@@ -15,7 +24,14 @@ function preload() {
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let container = select('#cursor-container');
+  cursorcanvas = createCanvas(100, 100);
+  cursorcanvas.parent(container); 
+
+  let container2 = select('#sketch-container');
+  sketchcanvas = createCanvas(windowWidth, windowHeight);
+  sketchcanvas.parent(container2); 
+
   noCursor();
   wavebaseline = height / 4;
   undercolor = color(195, 165, 255);
@@ -29,11 +45,20 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  sketchcanvas.clear();
+  cursorcanvas.fill(undercolor);
   wave();
   // drawRotatedEllipse({ x: mouseX, y: mouseY }, { x: mouseX + 10, y: mouseY + 10 }, 20);
-  image(customCursor, mouseX - width/32, mouseY-width/32, width/16, width/16);
+  
+  // drawRotatedEllipse();
 
+  let centerX = width / 2;
+  let centerY = height / 2;
+  let radius = 100;
+
+  drawNoisyEllipse();
+
+  cursorcanvas.image(customCursor, mouseX - width/32, mouseY-width/32, width/16, width/16);
 }
 
 function underwave() {
@@ -105,7 +130,18 @@ function wave() {
 
 }
 
-function drawRotatedEllipse(pos1, pos2, distance) {
+function drawRotatedEllipse() {
+  for (let i = ellipses.length; i < maxellipses; i++) {
+    let x = random(width); // Random x-coordinate within the canvas width
+    let y = random(height); // Random y-coordinate within the canvas height
+    let w = random(10, 100); // Random width between 10 and 100
+    let h = random(10, 100); // Random height between 10 and 100
+    let randomAngle = map(random(), 0, 1, -PI, PI);
+    ellipses.push({x, y, w, h, randomAngle});
+
+    fill(fillColor);
+    ellipse(x, y, w, h);
+  }
   let angle = atan2(pos2.y - pos1.y, pos2.x - pos1.x);
   push();
   translate(pos1.x, pos1.y);
@@ -130,7 +166,44 @@ function handleScroll(event) {
   if(wavebaseline > height * 15 / 16) {
     wavebaseline = height * 15 / 16;
   }
-  console.log('Scroll direction:', event.deltaY);
+  // console.log('Scroll direction:', event.deltaY);
 
   redraw();
+}
+
+function drawNoisyEllipse() {
+  ellipses = ellipses.filter((element) => element.y > wavebaseline + width / 16);
+  
+  for (let i = ellipses.length; i < maxellipses; i++) {
+    let x = random(width); 
+    let y = width / 8 + height; // Random y-coordinate within the canvas height
+    if(ellipses.length != 0) {
+      y = Math.max(ellipses[ellipses.length - 1].y, height) + width / 8;
+    }
+    let radius = random(width/ 8, width / 4); // Random width between 10 and 100
+    let angle = map(random(), 0, 1, 0, PI/4);
+    let delta = random();
+    ellipses.push({x, y, radius, angle, delta});
+
+  }
+  
+  for(let i = 0; i < ellipses.length; i++) {
+    push();
+    translate(ellipses[i].x, ellipses[i].y);
+    rotate(ellipses[i].angle);
+    beginShape();
+    let noiseValue = getNoiseValue(frameCount + ellipses[i].delta);
+    let offset = map(noiseValue, 0, 1, ellipses[i].radius / 3, ellipses[i].radius * 2 / 3);
+    ellipse(0,0, ellipses[i].radius - offset, offset);
+      
+    endShape(CLOSE);
+    pop();
+    ellipses[i].y  = ellipses[i].y - 1;
+  }
+  
+}
+
+function getNoiseValue(a) {
+  let noiseValue = noise(noiseScale * cos(a), noiseScale * sin(a), frameCount * 0.01);
+  return noiseValue;
 }
