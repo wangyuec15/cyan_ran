@@ -19,7 +19,7 @@ new p5(function(sketch1) {
   sketch1.setup = function() {
     
     let container2 = document.getElementById('sketch-container');
-    sketchcanvas = sketch1.createCanvas(sketch1.windowWidth, sketch1.windowHeight);
+    sketchcanvas = sketch1.createCanvas(sketch1.windowWidth, sketch1.windowHeight * 2.2);
     sketchcanvas.parent(container2); 
 
     sketch1.noCursor();
@@ -33,6 +33,11 @@ new p5(function(sketch1) {
     // let scrollContainer = document.getElementById('scroll-container');
     document.body.addEventListener('wheel', handleScroll);
   };
+
+  sketch1.draw = function() {
+    sketch1.resizeCanvas(windowWidth, windowHeight);
+    // Any other adjustments needed when the window is resized
+  } 
 
   sketch1.draw = function() {
     // Drawing code for sketch 1
