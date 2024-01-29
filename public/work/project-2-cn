@@ -10,10 +10,7 @@
     <meta content="Nos-Talgia-A-CH" property="twitter:title" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
-    <link
-      href="https://assets-global.website-files.com/6595ab239ac3dcd374eb6bde/css/rans-amazing-site-e693ab.webflow.5c1b45ca7.css"
-      rel="stylesheet"
-      type="text/css" />
+    <link href="../5c1b45ca7.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
       href="https://fonts.gstatic.com"
@@ -42,13 +39,8 @@
             (n.className += t + "touch");
       })(window, document);
     </script>
-    <link
-      href="https://assets-global.website-files.com/img/favicon.ico"
-      rel="shortcut icon"
-      type="image/x-icon" />
-    <link
-      href="https://assets-global.website-files.com/img/webclip.png"
-      rel="apple-touch-icon" />
+    <link href="../static/icon4.svg" rel="shortcut icon" type="image/x-icon" />
+    <link href="../static/icon4.svg" rel="apple-touch-icon" />
   </head>
   <body class="body">
     <div id="top" class="navbar-logo-center">
@@ -666,8 +658,6 @@
       type="text/javascript"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"></script>
-    <script
-      src="https://assets-global.website-files.com/6595ab239ac3dcd374eb6bde/js/webflow.8a3e1a552.js"
-      type="text/javascript"></script>
+    <script src="../assets.js" type="text/javascript"></script>
   </body>
 </html>
