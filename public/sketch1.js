@@ -16,11 +16,15 @@ new p5(function(sketch1) {
 
   let canvas1;
 
+  function pageHeight() {
+    return Math.max(document.body.scrollHeight, document.documentElement.scrollHeight, sketch1.windowHeight);
+  }
+
   sketch1.setup = function() {
-    
+
     let container2 = document.getElementById('sketch-container');
-    sketchcanvas = sketch1.createCanvas(sketch1.windowWidth, sketch1.windowHeight * 2.2);
-    sketchcanvas.parent(container2); 
+    sketchcanvas = sketch1.createCanvas(sketch1.windowWidth, pageHeight());
+    sketchcanvas.parent(container2);
 
     sketch1.noCursor();
     wavebaseline = sketch1.height / 4;
@@ -28,16 +32,19 @@ new p5(function(sketch1) {
     abovecolor = sketch1.color(255, 255, 255);
     // underwave()
     positions.push(0);
-    
+
     // Add event listener for scroll events on a specific element
     // let scrollContainer = document.getElementById('scroll-container');
     document.body.addEventListener('wheel', handleScroll);
+
+    // Images below the fold can still be loading at setup() time and
+    // grow the page after this canvas is sized, so recheck once everything's in.
+    window.addEventListener('load', () => sketch1.resizeCanvas(sketch1.windowWidth, pageHeight()));
   };
 
-  sketch1.draw = function() {
-    sketch1.resizeCanvas(windowWidth, windowHeight);
-    // Any other adjustments needed when the window is resized
-  } 
+  sketch1.windowResized = function() {
+    sketch1.resizeCanvas(sketch1.windowWidth, pageHeight());
+  };
 
   sketch1.draw = function() {
     // Drawing code for sketch 1

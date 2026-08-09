@@ -3408,6 +3408,7 @@ figcaption {
 }
 
 .container-7 {
+  container-type: inline-size;
   width: 900px;
   max-width: none;
   min-width: auto;
@@ -3454,8 +3455,8 @@ figcaption {
 }
 
 .link-block-2 {
-  width: 136px;
-  height: 136px;
+  width: 15.11cqw;
+  height: 15.11cqw;
   background-image: url("https://assets-global.website-files.com/6595ab239ac3dcd374eb6bde/65986dc9cc2e9197e8271dfb_window.svg");
   background-position: 50%;
   background-repeat: no-repeat;
@@ -3612,7 +3613,7 @@ figcaption {
 }
 
 .image-3 {
-  width: 54px;
+  width: 6cqw;
 }
 
 .div-block-3 {
@@ -3623,15 +3624,15 @@ figcaption {
 }
 
 .image-4 {
-  width: 54px;
+  width: 6cqw;
 }
 
 .image-5 {
-  width: 34px;
+  width: 3.78cqw;
 }
 
 .image-6 {
-  width: 54px;
+  width: 6cqw;
 }
 
 .image-7 {
@@ -4676,21 +4677,6 @@ figcaption {
     line-height: 64px;
   }
 
-  .link-block-2 {
-    width: 90px;
-    height: 90px;
-  }
-
-  .image-3,
-  .image-4,
-  .image-6 {
-    width: 36px;
-  }
-
-  .image-5 {
-    width: 22px;
-  }
-
   .section {
     grid-template-columns: 1fr;
     margin-left: 15px;
@@ -4975,21 +4961,6 @@ figcaption {
 
   .container-7 {
     grid-template-rows: 30% 19% 20% auto;
-  }
-
-  .link-block-2 {
-    width: 64px;
-    height: 64px;
-  }
-
-  .image-3,
-  .image-4,
-  .image-6 {
-    width: 26px;
-  }
-
-  .image-5 {
-    width: 16px;
   }
 
   .container-8 {
