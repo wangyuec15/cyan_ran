@@ -4674,7 +4674,8 @@ figcaption {
   }
 
   .heading-jumbo {
-    line-height: 64px;
+    font-size: 7.11vw;
+    line-height: 1.094;
   }
 
   html {
@@ -4914,8 +4915,6 @@ figcaption {
 
   .heading-jumbo {
     text-align: center;
-    font-size: 48px;
-    line-height: 48px;
   }
 
   .navigation {
