@@ -3220,8 +3220,8 @@ figcaption {
   order: -1;
   align-self: flex-end;
   margin-top: 0;
-  padding: 60px;
-  font-size: 36px;
+  padding: 6.67cqw;
+  font-size: 4cqw;
   line-height: 3vh;
   display: inline-block;
   position: relative;
@@ -3411,7 +3411,7 @@ figcaption {
   container-type: inline-size;
   width: 900px;
   max-width: none;
-  min-width: auto;
+  min-width: 0;
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
   background-image: url("https://assets-global.website-files.com/6595ab239ac3dcd374eb6bde/659795b11a6bd9603af05b42_%E5%8F%AA%E6%9C%89%E6%BD%9C%E6%B0%B4%E8%89%87.svg");
@@ -3545,8 +3545,8 @@ figcaption {
 }
 
 .div-block-2 {
-  width: 136px;
-  height: 136px;
+  width: 15.11cqw;
+  height: 15.11cqw;
   aspect-ratio: auto;
   color: var(--white);
   text-align: center;
@@ -3559,13 +3559,13 @@ figcaption {
   flex: 0 auto;
   align-self: auto;
   font-family: Rockwell, sans-serif;
-  font-size: 25px;
-  line-height: 22px;
+  font-size: 2.78cqw;
+  line-height: 0.88;
 }
 
 .div-block-2.ins {
-  width: 60px;
-  height: 60px;
+  width: 6.67cqw;
+  height: 6.67cqw;
   background-color: #fff;
   background-image: url("https://assets-global.website-files.com/6595ab239ac3dcd374eb6bde/6598e33a222c05e459f86677_Feather-logos-instagram.svg");
   background-position: 50%;
@@ -5569,6 +5569,18 @@ figcaption {
 
   #w-node-e43a02ca-6b3c-091f-bb73-ebc19e4ad200-978e1a78 {
     grid-area: 3 / 1 / 4 / 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #w-node-_5ef69f4b-642e-98aa-52fe-ffb9b2e76b2c-74eb6c0c {
+    grid-area: 2 / 1 / 3 / 2;
+    justify-self: center;
+  }
+
+  #w-node-ff14297a-cff0-9686-d45b-be5adadff8a9-74eb6c0c {
+    grid-area: 2 / 1 / 3 / 2;
+    justify-self: center;
   }
 }
 
