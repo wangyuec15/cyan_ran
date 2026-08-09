@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="150.0pt" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 150 150" width="150.0pt" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="鼠标">
+<g opacity="1">
+<path d="M5 75C5 36.341 36.34 5 75 5C113.66 5 145 36.341 145 75C145 113.66 113.66 145 75 145C36.34 145 5 113.66 5 75Z" fill="#ffffff" fill-opacity="0.5" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="butt" stroke-linejoin="round" stroke-width="2.12907"/>
+<path d="" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.62637"/>
+<g opacity="1">
+<path d="M52.56 54.352L67.13 100.921C68.02 103.77 70.15 104.11 71.88 101.68L80.01 90.298C81.74 87.868 81.55 84.079 79.58 81.835L54.51 53.256C52.54 51.012 51.66 51.502 52.56 54.352Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.08"/>
+<path d="M55.32 51.587L101.89 66.161C104.74 67.052 105.08 69.181 102.65 70.916L91.26 79.039C88.83 80.773 85.05 80.583 82.8 78.614L54.22 53.538C51.98 51.569 52.47 50.695 55.32 51.587Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.08"/>
+</g>
+</g>
+</g>
+</svg>

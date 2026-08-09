@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wave Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #scroll-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
+    }
+    #image-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 1;
+      background-image: url("static/lyingcat.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+    #cursor-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    #sketch-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id="scroll-container"> -->
+    <!-- Your content here -->
+  <!-- </div> -->
+  <div id="image-container">
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  
+  <div id="sketch-container">
+    
+  </div>
+  <div id="cursor-container">
+    
+  </div>
+
+  <script defer src="sketch1.js"></script>
+
+  <script defer src="cursor.js"></script>
+  <!-- <script>
+    let isScrolling = false; // Variable to track if the user is attempting to scroll
+
+    function handleScroll() {
+      console.log("scrolling");
+    }
+
+    function mouseReleased() {
+      isScrolling = false;
+    }
+
+    // document.body.addEventListener('wheel', handleScroll); // Add event listener to the document body
+  </script> -->
+</body>
+
+</html>
