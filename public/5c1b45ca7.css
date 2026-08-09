@@ -235,28 +235,28 @@ th {
 }
 
 .w-icon-slider-right:before {
-  content: "顦€";
+  content: ">";
 }
 
 .w-icon-slider-left:before {
-  content: "顦�";
+  content: "<";
 }
 
 .w-icon-nav-menu:before {
-  content: "顦�";
+  content: "≡";
 }
 
 .w-icon-arrow-down:before,
 .w-icon-dropdown-toggle:before {
-  content: "顦�";
+  content: "≡";
 }
 
 .w-icon-file-upload-remove:before {
-  content: "瞍€";
+  content: "≡";
 }
 
 .w-icon-file-upload-icon:before {
-  content: "瞍�";
+  content: "≡";
 }
 
 * {
